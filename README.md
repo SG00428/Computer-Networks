@@ -17,7 +17,7 @@ Ensure you have the following installed before running the code:
 ## Setup & Execution
 
 ### Part 1: Packet Sniffer (C++)
-
+Make a folder named 'packet_replayer' inside 'part-1' where 'packet_sniffer' folder exists. Store your .pcap file inside the folder.
 #### Step 1: Compile and Run Packet Sniffer
 **In Terminal 1:**
 ```sh
@@ -43,7 +43,7 @@ This will store the png format histogram
 ---
 
 ### Part 2: IMS Traffic Analysis (Python)
-
+Make a folder named 'replayer' inside 'part-2' where 'sniffer' folder exists. Store your .pcap file inside the 'sniffer' and 'replayer' folder.
 #### Step 1: Start Packet Sniffing
 **In Terminal 1:**
 ```sh
