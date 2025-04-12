@@ -1,4 +1,6 @@
-# CS331 - Network Topology and NAT Configuration (Part 1)
+# CS331 : Assignment 3
+# Question 1
+
 
 ## Files:
 - Q1a.py
