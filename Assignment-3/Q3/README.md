@@ -16,7 +16,7 @@ To compile the simulation:
 ```bash
 gcc distance_vector.c node0.c node1.c node2.c node3.c -o distance_vector
 ```
-This creates an executable named dvr.
+This creates an executable named distance_vector.
 
 Running the Simulation
 You can run the simulation with an optional trace level parameter:
