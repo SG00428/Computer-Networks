@@ -1,6 +1,4 @@
-# CS331 : Assignment 3
 # Question 1
-
 
 ## Files:
 - Q1a.py
