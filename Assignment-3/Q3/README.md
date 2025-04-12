@@ -27,6 +27,9 @@ You can run the simulation with an optional trace level parameter:
 Trace Levels
 
 0	Minimal output: Final routing tables and key events
+
 1	Basic tracing: Packet transmissions and table updates
+
 2	Detailed tracing: Packet contents and decisions
+
 3	Full debug: Internal steps and queuing details
