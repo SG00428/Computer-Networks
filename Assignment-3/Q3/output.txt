@@ -1,0 +1,625 @@
+Enter TRACE:2
+rtinit0() is called at time t=: 0.000
+                via
+   D0 |    1     2    3
+  ----|-----------------
+     1|    1   999   999
+dest 2|  999     3   999
+     3|  999   999     7
+At time t=0.000, node 0 sends packet to node 1 with: (0  1  3  7)
+At time t=0.000, node 0 sends packet to node 2 with: (0  1  3  7)
+At time t=0.000, node 0 sends packet to node 3 with: (0  1  3  7)
+rtinit1() is called at time t=: 0.000
+             via
+   D1 |    0     2
+  ----|-----------
+     0|    1   999
+dest 2|  999     1
+     3|  999   999
+At time t=0.000, node 1 sends packet to node 0 with: (1  0  1  999)
+At time t=0.000, node 1 sends packet to node 2 with: (1  0  1  999)
+rtinit2() is called at time t=: 0.000
+                via
+   D2 |    0     1    3
+  ----|-----------------
+     0|    3   999   999
+dest 1|  999     1   999
+     3|  999   999     2
+At time t=0.000, node 2 sends packet to node 0 with: (3  1  0  2)
+At time t=0.000, node 2 sends packet to node 1 with: (3  1  0  2)
+At time t=0.000, node 2 sends packet to node 3 with: (3  1  0  2)
+rtinit3() is called at time t=: 0.000
+             via
+   D3 |    0     2
+  ----|-----------
+     0|    7   999
+dest 1|  999   999
+     2|  999     2
+At time t=0.000, node 3 sends packet to node 0 with: (7  999  2  0)
+At time t=0.000, node 3 sends packet to node 2 with: (7  999  2  0)
+MAIN: rcv event, t=0.947, at 3 src: 0, dest: 3, contents:   0   1   3   7
+rtupdate3() is called at time t=: 0.947 as node 0 sent a pkt with (0  1  3  7)
+             via
+   D3 |    0     2
+  ----|-----------
+     0|    7   999
+dest 1|    8   999
+     2|   10     2
+At time t=0.947, node 3 sends packet to node 0 with: (7  8  2  0)
+At time t=0.947, node 3 sends packet to node 2 with: (7  8  2  0)
+MAIN: rcv event, t=0.992, at 0 src: 1, dest: 0, contents:   1   0   1 999
+rtupdate0() is called at time t=: 0.992 as node 1 sent a pkt with (1  0  1  999)
+                via
+   D0 |    1     2    3
+  ----|-----------------
+     1|    1   999   999
+dest 2|    2     3   999
+     3|  999   999     7
+At time t=0.992, node 0 sends packet to node 1 with: (0  1  2  7)
+At time t=0.992, node 0 sends packet to node 2 with: (0  1  2  7)
+At time t=0.992, node 0 sends packet to node 3 with: (0  1  2  7)
+MAIN: rcv event, t=1.209, at 3 src: 2, dest: 3, contents:   3   1   0   2
+rtupdate3() is called at time t=: 1.209 as node 2 sent a pkt with (3  1  0  2)
+             via
+   D3 |    0     2
+  ----|-----------
+     0|    7     5
+dest 1|    8     3
+     2|   10     2
+At time t=1.209, node 3 sends packet to node 0 with: (5  3  2  0)
+At time t=1.209, node 3 sends packet to node 2 with: (5  3  2  0)
+MAIN: rcv event, t=1.276, at 3 src: 0, dest: 3, contents:   0   1   2   7
+rtupdate3() is called at time t=: 1.276 as node 0 sent a pkt with (0  1  2  7)
+             via
+   D3 |    0     2
+  ----|-----------
+     0|    7     5
+dest 1|    8     3
+     2|    9     2
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=1.642, at 2 src: 0, dest: 2, contents:   0   1   3   7
+rtupdate2() is called at time t=: 1.642 as node 0 sent a pkt with (0  1  3  7)
+                via
+   D2 |    0     1    3
+  ----|-----------------
+     0|    3   999   999
+dest 1|    4     1   999
+     3|   10   999     2
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=1.871, at 1 src: 0, dest: 1, contents:   0   1   3   7
+rtupdate1() is called at time t=: 1.871 as node 0 sent a pkt with (0  1  3  7)
+             via
+   D1 |    0     2
+  ----|-----------
+     0|    1   999
+dest 2|    4     1
+     3|    8   999
+At time t=1.871, node 1 sends packet to node 0 with: (1  0  1  8)
+At time t=1.871, node 1 sends packet to node 2 with: (1  0  1  8)
+MAIN: rcv event, t=2.166, at 2 src: 1, dest: 2, contents:   1   0   1 999
+rtupdate2() is called at time t=: 2.166 as node 1 sent a pkt with (1  0  1  999)
+                via
+   D2 |    0     1    3
+  ----|-----------------
+     0|    3     2   999
+dest 1|    4     1   999
+     3|   10   999     2
+At time t=2.166, node 2 sends packet to node 0 with: (2  1  0  2)
+At time t=2.166, node 2 sends packet to node 1 with: (2  1  0  2)
+At time t=2.166, node 2 sends packet to node 3 with: (2  1  0  2)
+MAIN: rcv event, t=2.407, at 0 src: 2, dest: 0, contents:   3   1   0   2
+rtupdate0() is called at time t=: 2.407 as node 2 sent a pkt with (3  1  0  2)
+                via
+   D0 |    1     2    3
+  ----|-----------------
+     1|    1     4   999
+dest 2|    2     3   999
+     3|  999     5     7
+At time t=2.407, node 0 sends packet to node 1 with: (0  1  2  5)
+At time t=2.407, node 0 sends packet to node 2 with: (0  1  2  5)
+At time t=2.407, node 0 sends packet to node 3 with: (0  1  2  5)
+MAIN: rcv event, t=2.421, at 2 src: 3, dest: 2, contents:   7 999   2   0
+rtupdate2() is called at time t=: 2.421 as node 3 sent a pkt with (7  999  2  0)
+                via
+   D2 |    0     1    3
+  ----|-----------------
+     0|    3     2     9
+dest 1|    4     1   999
+     3|   10   999     2
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=2.811, at 1 src: 2, dest: 1, contents:   3   1   0   2
+rtupdate1() is called at time t=: 2.811 as node 2 sent a pkt with (3  1  0  2)
+             via
+   D1 |    0     2
+  ----|-----------
+     0|    1     4
+dest 2|    4     1
+     3|    8     3
+At time t=2.811, node 1 sends packet to node 0 with: (1  0  1  3)
+At time t=2.811, node 1 sends packet to node 2 with: (1  0  1  3)
+MAIN: rcv event, t=3.293, at 2 src: 3, dest: 2, contents:   7   8   2   0
+rtupdate2() is called at time t=: 3.293 as node 3 sent a pkt with (7  8  2  0)
+                via
+   D2 |    0     1    3
+  ----|-----------------
+     0|    3     2     9
+dest 1|    4     1    10
+     3|   10   999     2
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=3.602, at 3 src: 2, dest: 3, contents:   2   1   0   2
+rtupdate3() is called at time t=: 3.602 as node 2 sent a pkt with (2  1  0  2)
+             via
+   D3 |    0     2
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+At time t=3.602, node 3 sends packet to node 0 with: (4  3  2  0)
+At time t=3.602, node 3 sends packet to node 2 with: (4  3  2  0)
+MAIN: rcv event, t=4.063, at 2 src: 0, dest: 2, contents:   0   1   2   7
+rtupdate2() is called at time t=: 4.063 as node 0 sent a pkt with (0  1  2  7)
+                via
+   D2 |    0     1    3
+  ----|-----------------
+     0|    3     2     9
+dest 1|    4     1    10
+     3|   10   999     2
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=4.104, at 0 src: 3, dest: 0, contents:   7 999   2   0
+rtupdate0() is called at time t=: 4.104 as node 3 sent a pkt with (7  999  2  0)
+                via
+   D0 |    1     2    3
+  ----|-----------------
+     1|    1     4   999
+dest 2|    2     3     9
+     3|  999     5     7
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=4.169, at 2 src: 3, dest: 2, contents:   5   3   2   0
+rtupdate2() is called at time t=: 4.169 as node 3 sent a pkt with (5  3  2  0)
+                via
+   D2 |    0     1    3
+  ----|-----------------
+     0|    3     2     7
+dest 1|    4     1     5
+     3|   10   999     2
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=4.330, at 0 src: 3, dest: 0, contents:   7   8   2   0
+rtupdate0() is called at time t=: 4.330 as node 3 sent a pkt with (7  8  2  0)
+                via
+   D0 |    1     2    3
+  ----|-----------------
+     1|    1     4    15
+dest 2|    2     3     9
+     3|  999     5     7
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=4.643, at 1 src: 0, dest: 1, contents:   0   1   2   7
+rtupdate1() is called at time t=: 4.643 as node 0 sent a pkt with (0  1  2  7)
+             via
+   D1 |    0     2
+  ----|-----------
+     0|    1     4
+dest 2|    3     1
+     3|    8     3
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=5.213, at 0 src: 3, dest: 0, contents:   5   3   2   0
+rtupdate0() is called at time t=: 5.213 as node 3 sent a pkt with (5  3  2  0)
+                via
+   D0 |    1     2    3
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|  999     5     7
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=5.384, at 3 src: 0, dest: 3, contents:   0   1   2   5
+rtupdate3() is called at time t=: 5.384 as node 0 sent a pkt with (0  1  2  5)
+             via
+   D3 |    0     2
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=5.820, at 1 src: 2, dest: 1, contents:   2   1   0   2
+rtupdate1() is called at time t=: 5.820 as node 2 sent a pkt with (2  1  0  2)
+             via
+   D1 |    0     2
+  ----|-----------
+     0|    1     3
+dest 2|    3     1
+     3|    8     3
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=6.042, at 2 src: 1, dest: 2, contents:   1   0   1   8
+rtupdate2() is called at time t=: 6.042 as node 1 sent a pkt with (1  0  1  8)
+                via
+   D2 |    0     1    3
+  ----|-----------------
+     0|    3     2     7
+dest 1|    4     1     5
+     3|   10     9     2
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=6.071, at 0 src: 1, dest: 0, contents:   1   0   1   8
+rtupdate0() is called at time t=: 6.071 as node 1 sent a pkt with (1  0  1  8)
+                via
+   D0 |    1     2    3
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    9     5     7
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=6.532, at 1 src: 0, dest: 1, contents:   0   1   2   5
+rtupdate1() is called at time t=: 6.532 as node 0 sent a pkt with (0  1  2  5)
+             via
+   D1 |    0     2
+  ----|-----------
+     0|    1     3
+dest 2|    3     1
+     3|    6     3
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=7.021, at 0 src: 2, dest: 0, contents:   2   1   0   2
+rtupdate0() is called at time t=: 7.021 as node 2 sent a pkt with (2  1  0  2)
+                via
+   D0 |    1     2    3
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    9     5     7
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=7.160, at 2 src: 0, dest: 2, contents:   0   1   2   5
+rtupdate2() is called at time t=: 7.160 as node 0 sent a pkt with (0  1  2  5)
+                via
+   D2 |    0     1    3
+  ----|-----------------
+     0|    3     2     7
+dest 1|    4     1     5
+     3|    8     9     2
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=7.405, at 0 src: 1, dest: 0, contents:   1   0   1   3
+rtupdate0() is called at time t=: 7.405 as node 1 sent a pkt with (1  0  1  3)
+                via
+   D0 |    1     2    3
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+At time t=7.405, node 0 sends packet to node 1 with: (0  1  2  4)
+At time t=7.405, node 0 sends packet to node 2 with: (0  1  2  4)
+At time t=7.405, node 0 sends packet to node 3 with: (0  1  2  4)
+MAIN: rcv event, t=7.579, at 3 src: 0, dest: 3, contents:   0   1   2   4
+rtupdate3() is called at time t=: 7.579 as node 0 sent a pkt with (0  1  2  4)
+             via
+   D3 |    0     2
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=7.941, at 1 src: 0, dest: 1, contents:   0   1   2   4
+rtupdate1() is called at time t=: 7.941 as node 0 sent a pkt with (0  1  2  4)
+             via
+   D1 |    0     2
+  ----|-----------
+     0|    1     3
+dest 2|    3     1
+     3|    5     3
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=8.086, at 0 src: 3, dest: 0, contents:   4   3   2   0
+rtupdate0() is called at time t=: 8.086 as node 3 sent a pkt with (4  3  2  0)
+                via
+   D0 |    1     2    3
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=8.639, at 2 src: 1, dest: 2, contents:   1   0   1   3
+rtupdate2() is called at time t=: 8.639 as node 1 sent a pkt with (1  0  1  3)
+                via
+   D2 |    0     1    3
+  ----|-----------------
+     0|    3     2     7
+dest 1|    4     1     5
+     3|    8     4     2
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=8.943, at 2 src: 3, dest: 2, contents:   4   3   2   0
+rtupdate2() is called at time t=: 8.943 as node 3 sent a pkt with (4  3  2  0)
+                via
+   D2 |    0     1    3
+  ----|-----------------
+     0|    3     2     6
+dest 1|    4     1     5
+     3|    8     4     2
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=9.960, at 2 src: 0, dest: 2, contents:   0   1   2   4
+rtupdate2() is called at time t=: 9.960 as node 0 sent a pkt with (0  1  2  4)
+                via
+   D2 |    0     1    3
+  ----|-----------------
+     0|    3     2     6
+dest 1|    4     1     5
+     3|    7     4     2
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=10000.000, at -1                via
+   D0 |    1     2    3
+  ----|-----------------
+     1|   20     4    10
+dest 2|   21     3     9
+     3|   23     5     7
+At time t=10000.000, node 0 sends packet to node 1 with: (0  4  3  5)
+At time t=10000.000, node 0 sends packet to node 2 with: (0  4  3  5)
+At time t=10000.000, node 0 sends packet to node 3 with: (0  4  3  5)
+             via
+   D1 |    0     2
+  ----|-----------
+     0|   20     3
+dest 2|   22     1
+     3|   24     3
+At time t=10000.000, node 1 sends packet to node 0 with: (3  0  1  3)
+At time t=10000.000, node 1 sends packet to node 2 with: (3  0  1  3)
+MAIN: rcv event, t=10000.178, at 1 src: 0, dest: 1, contents:   0   4   3   5
+rtupdate1() is called at time t=: 10000.178 as node 0 sent a pkt with (0  4  3  5)
+             via
+   D1 |    0     2
+  ----|-----------
+     0|   20     3
+dest 2|   23     1
+     3|   25     3
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=10000.702, at 0 src: 1, dest: 0, contents:   3   0   1   3
+rtupdate0() is called at time t=: 10000.702 as node 1 sent a pkt with (3  0  1  3)
+                via
+   D0 |    1     2    3
+  ----|-----------------
+     1|   20     4    10
+dest 2|   21     3     9
+     3|   23     5     7
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=10001.166, at 3 src: 0, dest: 3, contents:   0   4   3   5
+rtupdate3() is called at time t=: 10001.166 as node 0 sent a pkt with (0  4  3  5)
+             via
+   D3 |    0     2
+  ----|-----------
+     0|    7     4
+dest 1|   11     3
+     2|   10     2
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=10001.964, at 2 src: 0, dest: 2, contents:   0   4   3   5
+rtupdate2() is called at time t=: 10001.964 as node 0 sent a pkt with (0  4  3  5)
+                via
+   D2 |    0     1    3
+  ----|-----------------
+     0|    3     2     6
+dest 1|    7     1     5
+     3|    8     4     2
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=10003.342, at 2 src: 1, dest: 2, contents:   3   0   1   3
+rtupdate2() is called at time t=: 10003.342 as node 1 sent a pkt with (3  0  1  3)
+                via
+   D2 |    0     1    3
+  ----|-----------------
+     0|    3     4     6
+dest 1|    7     1     5
+     3|    8     4     2
+At time t=10003.342, node 2 sends packet to node 0 with: (3  1  0  2)
+At time t=10003.342, node 2 sends packet to node 1 with: (3  1  0  2)
+At time t=10003.342, node 2 sends packet to node 3 with: (3  1  0  2)
+MAIN: rcv event, t=10003.448, at 0 src: 2, dest: 0, contents:   3   1   0   2
+rtupdate0() is called at time t=: 10003.448 as node 2 sent a pkt with (3  1  0  2)
+                via
+   D0 |    1     2    3
+  ----|-----------------
+     1|   20     4    10
+dest 2|   21     3     9
+     3|   23     5     7
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=10004.307, at 1 src: 2, dest: 1, contents:   3   1   0   2
+rtupdate1() is called at time t=: 10004.307 as node 2 sent a pkt with (3  1  0  2)
+             via
+   D1 |    0     2
+  ----|-----------
+     0|   20     4
+dest 2|   23     1
+     3|   25     3
+At time t=10004.307, node 1 sends packet to node 0 with: (4  0  1  3)
+At time t=10004.307, node 1 sends packet to node 2 with: (4  0  1  3)
+MAIN: rcv event, t=10004.417, at 3 src: 2, dest: 3, contents:   3   1   0   2
+rtupdate3() is called at time t=: 10004.417 as node 2 sent a pkt with (3  1  0  2)
+             via
+   D3 |    0     2
+  ----|-----------
+     0|    7     5
+dest 1|   11     3
+     2|   10     2
+At time t=10004.417, node 3 sends packet to node 0 with: (5  3  2  0)
+At time t=10004.417, node 3 sends packet to node 2 with: (5  3  2  0)
+MAIN: rcv event, t=10004.669, at 0 src: 1, dest: 0, contents:   4   0   1   3
+rtupdate0() is called at time t=: 10004.669 as node 1 sent a pkt with (4  0  1  3)
+                via
+   D0 |    1     2    3
+  ----|-----------------
+     1|   20     4    10
+dest 2|   21     3     9
+     3|   23     5     7
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=10005.498, at 2 src: 1, dest: 2, contents:   4   0   1   3
+rtupdate2() is called at time t=: 10005.498 as node 1 sent a pkt with (4  0  1  3)
+                via
+   D2 |    0     1    3
+  ----|-----------------
+     0|    3     5     6
+dest 1|    7     1     5
+     3|    8     4     2
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=10005.692, at 2 src: 3, dest: 2, contents:   5   3   2   0
+rtupdate2() is called at time t=: 10005.692 as node 3 sent a pkt with (5  3  2  0)
+                via
+   D2 |    0     1    3
+  ----|-----------------
+     0|    3     5     7
+dest 1|    7     1     5
+     3|    8     4     2
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=10006.615, at 0 src: 3, dest: 0, contents:   5   3   2   0
+rtupdate0() is called at time t=: 10006.615 as node 3 sent a pkt with (5  3  2  0)
+                via
+   D0 |    1     2    3
+  ----|-----------------
+     1|   20     4    10
+dest 2|   21     3     9
+     3|   23     5     7
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=20000.000, at 0                via
+   D0 |    1     2    3
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+At time t=20000.000, node 0 sends packet to node 1 with: (0  1  2  4)
+At time t=20000.000, node 0 sends packet to node 2 with: (0  1  2  4)
+At time t=20000.000, node 0 sends packet to node 3 with: (0  1  2  4)
+             via
+   D1 |    0     2
+  ----|-----------
+     0|    1     4
+dest 2|    4     1
+     3|    6     3
+At time t=20000.000, node 1 sends packet to node 0 with: (1  0  1  3)
+At time t=20000.000, node 1 sends packet to node 2 with: (1  0  1  3)
+MAIN: rcv event, t=20000.014, at 2 src: 0, dest: 2, contents:   0   1   2   4
+rtupdate2() is called at time t=: 20000.014 as node 0 sent a pkt with (0  1  2  4)
+                via
+   D2 |    0     1    3
+  ----|-----------------
+     0|    3     5     7
+dest 1|    4     1     5
+     3|    7     4     2
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=20000.068, at 0 src: 1, dest: 0, contents:   1   0   1   3
+rtupdate0() is called at time t=: 20000.068 as node 1 sent a pkt with (1  0  1  3)
+                via
+   D0 |    1     2    3
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=20000.885, at 2 src: 1, dest: 2, contents:   1   0   1   3
+rtupdate2() is called at time t=: 20000.885 as node 1 sent a pkt with (1  0  1  3)
+                via
+   D2 |    0     1    3
+  ----|-----------------
+     0|    3     2     7
+dest 1|    4     1     5
+     3|    7     4     2
+At time t=20000.885, node 2 sends packet to node 0 with: (2  1  0  2)
+At time t=20000.885, node 2 sends packet to node 1 with: (2  1  0  2)
+At time t=20000.885, node 2 sends packet to node 3 with: (2  1  0  2)
+MAIN: rcv event, t=20001.076, at 3 src: 0, dest: 3, contents:   0   1   2   4
+rtupdate3() is called at time t=: 20001.076 as node 0 sent a pkt with (0  1  2  4)
+             via
+   D3 |    0     2
+  ----|-----------
+     0|    7     5
+dest 1|    8     3
+     2|    9     2
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=20001.125, at 3 src: 2, dest: 3, contents:   2   1   0   2
+rtupdate3() is called at time t=: 20001.125 as node 2 sent a pkt with (2  1  0  2)
+             via
+   D3 |    0     2
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+At time t=20001.125, node 3 sends packet to node 0 with: (4  3  2  0)
+At time t=20001.125, node 3 sends packet to node 2 with: (4  3  2  0)
+MAIN: rcv event, t=20001.834, at 0 src: 2, dest: 0, contents:   2   1   0   2
+rtupdate0() is called at time t=: 20001.834 as node 2 sent a pkt with (2  1  0  2)
+                via
+   D0 |    1     2    3
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=20001.961, at 1 src: 0, dest: 1, contents:   0   1   2   4
+rtupdate1() is called at time t=: 20001.961 as node 0 sent a pkt with (0  1  2  4)
+             via
+   D1 |    0     2
+  ----|-----------
+     0|    1     4
+dest 2|    3     1
+     3|    5     3
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=20002.221, at 0 src: 3, dest: 0, contents:   4   3   2   0
+rtupdate0() is called at time t=: 20002.221 as node 3 sent a pkt with (4  3  2  0)
+                via
+   D0 |    1     2    3
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=20002.854, at 2 src: 3, dest: 2, contents:   4   3   2   0
+rtupdate2() is called at time t=: 20002.854 as node 3 sent a pkt with (4  3  2  0)
+                via
+   D2 |    0     1    3
+  ----|-----------------
+     0|    3     2     6
+dest 1|    4     1     5
+     3|    7     4     2
+
+Minimum cost didn't change. No new packets are sent
+MAIN: rcv event, t=20002.979, at 1 src: 2, dest: 1, contents:   2   1   0   2
+rtupdate1() is called at time t=: 20002.979 as node 2 sent a pkt with (2  1  0  2)
+             via
+   D1 |    0     2
+  ----|-----------
+     0|    1     3
+dest 2|    3     1
+     3|    5     3
+
+Minimum cost didn't change. No new packets are sent
+
+Simulator terminated at t=20002.978516, no packets in medium
+Minimum cost from 0 to other nodes are: 0 1 2 4
+Minimum cost from 1 to other nodes are: 1 0 1 3
+Minimum cost from 2 to other nodes are: 2 1 0 2
+Minimum cost from 3 to other nodes are: 4 3 2 0
